@@ -6,17 +6,19 @@
     <link rel="stylesheet" href="css/bootstrap.css"/>
 </head>
 <body>
-<header class="navbar">
-    <div class="nav-header">
-        <h1 class="page-header">The Backbone Shop</h1>
-    </div>
-</header>
-<section class="row-fluid">
-    <div class="hero-unit container app_container"></div>
-</section>
-<footer class="bottom">
-    <p>This is a footer place</p>
-</footer>
+<div class="container">
+    <header class="navbar">
+        <div class="nav-header">
+            <h1 class="page-header">The Backbone Shop</h1>
+        </div>
+    </header>
+    <section class="row-fluid">
+        <div class="hero-unit app_container"></div>
+    </section>
+    <footer class="bottom pull-right">
+        <p>This is a footer place</p>
+    </footer>
+</div>
 
 <!--cart template-->
 <script type="text/template" id="cartView">
@@ -27,16 +29,24 @@
     </div>
     <table class="table table-bordered">
         <thead class="">
-            <th>Item name</th>
-            <th>Price</th>
-            <th>Value</th>
+            <tr>
+                <th>Item name</th>
+                <th>Price</th>
+                <th>Value</th>
+            </tr>
         </thead>
         <tbody class="itemsList"></tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3">
+                    <div class="itemsTotal pull-right">
+                        <p>Total items: <span class="itemsTotalValue">0</span></p>
+                        <p>Total price: <span class="itemsTotalPrice">0</span></p>
+                    </div>
+                </td>
+            </tr>
+        </tfoot>
     </table>
-    <div class="itemsTotal pull-right">
-        <p>Total items: <span class="itemsTotalValue">0</span></p>
-        <p>Total price: <span class="itemsTotalPrice">0</span></p>
-    </div>
 </script>
 
 <!--item template-->
