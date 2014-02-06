@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+</head>
+<body>
+<header class="navbar">
+    <div class="nav-header">
+        <h1 class="page-header">The Backbone Shop</h1>
+    </div>
+</header>
+<section class="row-fluid">
+    <div class="hero-unit container app_container"></div>
+</section>
+<footer class="bottom">
+    <p>This is a footer place</p>
+</footer>
+
+<!--cart template-->
+<script type="text/template" id="cartView">
+    <h2 class="pull-right">Shopping cart</h2>
+    <div class="btn-group control-group">
+        <button class="btn btn-success addItem">Add Item</button>
+        <button class="btn btn-danger clearAll">Clear All</button>
+    </div>
+    <table class="table table-bordered">
+        <thead class="">
+            <th>Item name</th>
+            <th>Price</th>
+            <th>Value</th>
+        </thead>
+        <tbody class="itemsList"></tbody>
+    </table>
+    <div class="itemsTotal pull-right">
+        <p>Total items: <span class="itemsTotalValue">0</span></p>
+        <p>Total price: <span class="itemsTotalPrice">0</span></p>
+    </div>
+</script>
+
+<!--item template-->
+<script type="text/template" id="itemView">
+    <td class="itemName"><%- name %></td>
+    <td class="itemPrice"><%- price %></td>
+    <td class="itemValue form-horizontal">
+        <button class="btn btn-small btn-warning decValue">-</button>
+        <input class="itemValue input-mini" disabled size="3" value="<%- value %>"/>
+        <button class="btn btn-small btn-success incValue">+</button>
+    </td>
+</script>
+
+<script type="text/javascript" src="js/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="js/underscore.js"></script>
+<script type="text/javascript" src="js/backbone.js"></script>
+<script type="text/javascript" src="app/ItemModel.js"></script>
+<script type="text/javascript" src="app/ItemsCollection.js"></script>
+<script type="text/javascript" src="app/CartView.js"></script>
+<script type="text/javascript" src="app/ItemView.js"></script>
+<script type="text/javascript" src="app/Router.js"></script>
+<script type="text/javascript" src="main.js"></script>
+</body>
+</html>
